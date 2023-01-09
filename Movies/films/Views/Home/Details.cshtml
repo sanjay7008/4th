@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h1 class="display-4">Ye Dekhle</h1>
+    <ul>
+        List<pikchare> allmMovies = (List<pikchare>)ViewData["movies"];)
+        @foreach ( pikchare p in allMovies)
+        { <li> <a href="/products/details/@product.ProductId">@</a></li>
+            
+        }
+    </ul>
+</div>

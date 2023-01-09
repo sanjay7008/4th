@@ -1,0 +1,26 @@
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using films.Models;
+using BOL:
+using BLL;
+
+namespace films.Controllers;
+
+public class Cmovies : Controller
+{
+    private readonly ILogger<Cmovies> _logger;
+
+    public Cmovies(ILogger<Cmovies> logger)
+    {
+        _logger = logger;
+    }
+
+ 
+    public IActionResult Details( int id)
+    {
+      MovieList manager=new MovieList();
+      pikchare product=manager.GetAllMovies();
+      this.ViewData["product"]=product;
+      return View();
+    }
+}
